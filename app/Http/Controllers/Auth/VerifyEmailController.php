@@ -23,6 +23,8 @@ class VerifyEmailController extends Controller
             event(new Verified($request->user()));
         }
 
-        return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');
+       // return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');
+       //hna 34an lma tfos 3la verfiy ywdek 3la dashboard bta3tk
+        return to_route('front.index',RouteServiceProvider::HOME.'?verified=1');
     }
 }
